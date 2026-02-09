@@ -55,6 +55,12 @@ steps:
 
   The directory or file to push to Itch.io
 
+- #### BUTLER_VERSION
+
+  The version of butler to use for publishing. Defaults to `LATEST` if not specified.
+
+  You can specify a specific version like `15.21.0` or use `LATEST` to always get the newest version.
+
 - #### VERSION
 
   The version of your project to have in your release.

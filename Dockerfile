@@ -5,13 +5,7 @@ LABEL "com.github.actions.description"="Publishes releases to Itch.io using Butl
 LABEL "com.github.actions.icon"="upload"
 LABEL "com.github.actions.color"="white"
 
-RUN dnf install unzip -y
-
-# Install Butler
-RUN curl -L -o butler.zip https://broth.itch.zone/butler/linux-amd64/LATEST/archive/default \
-    && unzip butler.zip \
-    && cp butler /usr/bin \
-    && chmod +x /usr/bin/butler
+RUN dnf install unzip curl -y
 
 # Run butler push
 COPY entrypoint.sh /entrypoint.sh
